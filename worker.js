@@ -335,7 +335,7 @@ async function checkCopilotStatus(name, token) {
 	});
 	if (response.status === 200) {
 		// 获取响应结果
-		response.json().then(
+		await response.json().then(
 			(data) => {
 				return 'enabled' === data.ide_chat;
 			}
